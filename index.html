@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gro ERP</title>
+    <link rel="stylesheet" href="base.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!--********************************************************************* HEADER -->
+    <header>
+        <p id="school-name">ABS Public School</p>
+        <p id="session">Session 2023-24</p>
+        <input type="text" name="search" id="super-search" placeholder="Search...">
+        <div id="profile-pic"></div>
+    </header>
+
+
+
+    <!-- ********************************************************************* ASIDE -->
+    <aside>
+        <p id="app-heading">Gro ERP</p>
+        <div class="aside-child">
+            <div></div>
+            <p>Dashboard</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Student</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Finance</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Inventory</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Transport</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Hostel</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Library</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Examination</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Employee</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Front Desk</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Academic</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Users and Roles</p>
+        </div>
+        <div class="aside-child">
+            <div></div>
+            <p>Settings</p>
+        </div>
+    </aside>
+
+
+
+    <!-- ********************************************************************* MAIN -->
+    <main>
+        <!-- ********************************************************************* DASHBOARD SECTION -->
+        <section class="section" id="dashboard-section">
+            <div class="section-header">
+                <p class="section-heading">Dashboard</p>
+                <select name="dropdown" id="dashboard-time-frame">
+                    <option value="today">Today's</option>
+                    <option value="lastmonth">Last Week's</option>
+                    <option value="lastmonth">Last Month's</option>
+                    <option value="lastyear">Last Years's</option>
+                </select>
+                <p class="section-close-icon">✕</p>
+            </div>
+            <div id="dashboard-top-4-cards">
+                <div id="cash-balance"></div>
+                <div id="bank-balance"></div>
+                <div id="total-expenses"></div>
+                <div id="salary-payable"></div>
+            </div>
+            <div id="dashboard-center-2-cards">
+                <div></div>
+                <div></div>
+            </div>
+            <div id="dashboard-right-1-card">
+                <p class="class-wise-fee-dues" id="class-wise-fee-dues-heading">Class Wise Fee Dues</p>
+                <p class="class-wise-fee-dues">Class - 1()</p>
+                <p class="class-wise-fee-dues">Class - 2()</p>
+                <p class="class-wise-fee-dues">Class - 3()</p>
+                <p class="class-wise-fee-dues">Class - 4()</p>
+                <p class="class-wise-fee-dues">Class - 5()</p>
+                <p class="class-wise-fee-dues">Class - 6()</p>
+                <p class="class-wise-fee-dues">Class - 7()</p>
+                <p class="class-wise-fee-dues">Class - 8()</p>
+                <p class="class-wise-fee-dues">Class - 9()</p>
+                <p class="class-wise-fee-dues">Class - 10()</p>
+                <p class="class-wise-fee-dues" id="class-wise-fee-dues-total">Total:</p>
+            </div>
+            <div id="dashboard-class-wise-attendance">
+                <p>Class Wise Attendance</p>
+                <div id="attendance-table">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* STUDENT SECTION -->
+        <section class="section" id="student-section">
+            <div class="section-header">
+                <p class="section-heading">Student Management</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+            <p id="students-top-6-cards-heading">Activity</p>
+            <div id="students-top-6-cards">
+                <p class="students-top-6-cards-child">Admission</p>
+                <p class="students-top-6-cards-child">Attendance</p>
+                <p class="students-top-6-cards-child">Leave</p>
+                <p class="students-top-6-cards-child">Generate I-Card</p>
+                <p class="students-top-6-cards-child">Update Student</p>
+                <p class="students-top-6-cards-child">Promote Student</p>
+            </div>
+            <div id="students-right-1-card">
+                <div>
+                    <p id="students-right-1-card-heading">Student Reports</p>
+                    <p>Student List</p>
+                    <p>Attendance</p>
+                </div>
+            </div>
+
+            <!-- ********************************************************************* STUDENT SECTION > ADMISSION -->
+            <section class="sub-section" id="student-admission">
+                <div class="sub-section-header">
+                    <p class="sub-section-heading">Student Admission</p>
+                    <p class="sub-section-close-icon">✕</p>
+                </div>
+                <div id="admission-header">
+                    <p>Basic</p>
+                    <p>Family Details</p>
+                    <p>Sibling</p>
+                    <p>Prev. School</p>
+                    <p>Documents</p>
+                </div>
+                <form class="sub-sub-section">
+                    <div>
+                        <label for="first-name">First Name*</label>
+                        <input name="first-name" type="text">
+
+                        <label for="class">Class</label>
+                        <select name="class" id="class-select">
+                            <option value="Class-1">Class 1</option>
+                            <option value="Class-2">Class 2</option>
+                            <option value="Class-3">Class 3</option>
+                            <option value="Class-4">Class 4</option>
+                            <option value="Class-5">Class 5</option>
+                            <option value="Class-6">Class 6</option>
+                            <option value="Class-7">Class 7</option>
+                            <option value="Class-8">Class 8</option>
+                            <option value="Class-9">Class 9</option>
+                            <option value="Class-10">Class 10</option>
+                            <option value="Class-11">Class 11</option>
+                            <option value="Class-12">Class 12</option>
+                        </select>
+
+
+                        <label for="concession-category">Concession Category</label>
+                        <select name="concession-category" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+
+                        <label for="caste">Caste</label>
+                        <select name="caste" id="">
+                            <option value="yadav">Yadav</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+
+                        <label for="registration-date">Registration Date</label>
+                        <input name="registration-date" type="date">
+
+                        <label for="house">House</label>
+                        <select name="house" id="">
+                            <option value="red-house">Red House</option>
+                            <option value="blue-house">Blue House</option>
+                            <option value="green-house">Green House</option>
+                            <option value="yellow-house">Yellow House</option>
+                        </select>
+
+                        <label for="living-with">Living With</label>
+                        <select name="living-with" id="">
+                            <option value="parents">Parents</option>
+                            <option value="grand-parents">Grand Parents</option>
+                            <option value="orphanage">Orphanage</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="last-name">Last Name*</label>
+                        <input name="last-name" type="text">
+
+                        <label for="section">Section</label>
+                        <select name="class" id="class-select">
+                            <option value="Section-A">Section-A</option>
+                            <option value="Section-B">Section-B</option>
+                            <option value="Section-C">Section-C</option>
+                            <option value="Section-D">Section-D</option>
+                            <option value="Section-E">Section-E</option>
+                            <option value="Section-F">Section-F</option>
+                            <option value="Section-G">Section-G</option>
+                            <option value="Section-H">Section-H</option>
+                        </select>
+
+
+                        <label for="blood-group">Blood Group</label>
+                        <select name="blood-group" id="">
+                            <option value="o-p">O +ve</option>
+                            <option value="o-n">O -ve</option>
+                            <option value="ab-p">AB +ve</option>
+                            <option value="ab-n">AB -ve</option>
+                            <option value="a-p">A +ve</option>
+                            <option value="a-n">A -ve</option>
+                            <option value="b-p">B +ve</option>
+                            <option value="b-n">B -ve</option>
+                        </select>
+
+                        <label for="caste">Category</label>
+                        <select name="caste" id="">
+                            <option value="general">General</option>
+                            <option value="sc">Scheduled Caste (SC)</option>
+                            <option value="st">Scheduled Tribe (ST)</option>
+                            <option value="OBC">Other Backward Castes (OBC)</option>
+                        </select>
+
+                        <label for="registration-no">Registration No.</label>
+                        <input name="registration-no" type="text" maxlength="15" placeholder="" />
+
+                        <label for="aadhar-no">Aadhar No.</label>
+                        <input name="aadhar-no" type="text" maxlength="15" placeholder="xxxx xxxx xxxx xxxx" />
+
+                        <label for="primary-contact-person">Primary Contact Person</label>
+                        <select name="primary-contact-person" id="">
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="other-family-member">Other Family Member</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="first-name">First Name*</label>
+                        <input name="first-name" type="text">
+
+                        <label for="class">Class</label>
+                        <select name="class" id="class-select">
+                            <option value="Class-1">Class 1</option>
+                            <option value="Class-2">Class 2</option>
+                            <option value="Class-3">Class 3</option>
+                            <option value="Class-4">Class 4</option>
+                            <option value="Class-5">Class 5</option>
+                            <option value="Class-6">Class 6</option>
+                            <option value="Class-7">Class 7</option>
+                            <option value="Class-8">Class 8</option>
+                            <option value="Class-9">Class 9</option>
+                            <option value="Class-10">Class 10</option>
+                            <option value="Class-11">Class 11</option>
+                            <option value="Class-12">Class 12</option>
+                        </select>
+
+
+                        <label for="concession-category">Concession Category</label>
+                        <select name="concession-category" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+
+                        <label for="caste">Caste</label>
+                        <select name="caste" id="">
+                            <option value="general">General</option>
+                            <option value="sc">Scheduled Caste (SC)</option>
+                            <option value="st">Scheduled Tribe (ST)</option>
+                            <option value="OBC">Other Backward Castes (OBC)</option>
+                        </select>
+
+                        <label for="registration-date">Registration Date</label>
+                        <input name="registration-date" type="date">
+
+                        <label for="house">House</label>
+                        <select name="house" id="">
+                            <option value="red-house">Red House</option>
+                            <option value="blue-house">Blue House</option>
+                            <option value="green-house">Green House</option>
+                            <option value="yellow-house">Yellow House</option>
+                        </select>
+
+                        <label for="living-with">Living With</label>
+                        <select name="living-with" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    <div></div>
+                </form>
+                <form class="sub-sub-section">
+
+                </form>
+                <form class="sub-sub-section">
+
+                </form>
+                <form class="sub-sub-section">
+
+                </form>
+                <form class="sub-sub-section">
+
+                </form>
+            </section>
+
+            <!-- ********************************************************************* STUDENT SECTION > ATTENDANCE-->
+            <section class="sub-section">
+                <div class="sub-section-header">
+                    <p class="sub-section-heading">Attendance</p>
+                    <p class="sub-section-close-icon">✕</p>
+                </div>
+            </section>
+
+            <!-- ********************************************************************* STUDENT SECTION > LEAVE-->
+            <section class="sub-section">
+                <div class="sub-section-header">
+                    <p class="sub-section-heading">Apply Leave</p>
+                    <p class="sub-section-close-icon">✕</p>
+                </div>
+                <form class="leave-left-section">
+                    <label for="name">Student</label>
+                    <input name="name" type="text" placeholder="Name">
+
+                    <label for="from-date">From Date</label>
+                    <input name="from-date" type="date">
+
+                    <label for="to-date">To Date</label>
+                    <input name="to-date" type="date">
+
+                    <label for="remarks">Remarks</label>
+                    <textarea name="remarks" rows="4" placeholder="Input text..."></textarea>
+                    <div class="leave-sub-section-buttons">
+                        <button class="save-button">Save</button>
+                        <input type="reset" value="Clear" class="clear-button">
+                    </div>
+                </form>
+                <div id="leave-student-details">
+                    <p>Admission No. : 52241522</p>
+                    <p>Admission Date : 01-01-2022</p>
+                    <p>Category : General</p>
+                    <p>Class : 8th</p>
+                    <p>Section : A</p>
+                    <p>Address:
+                        3501B Patel Nagar
+                        Near Metro Station
+                        New Delhi, 110008</p>
+                    <p>Contact :+91 8545454747</p>
+                    <div id="leave-student-photo"></div>
+                </div>
+            </section>
+
+            <!-- ********************************************************************* STUDENT SECTION > I-CARD-->
+            <section class="sub-section">
+                <div class="sub-section-header">
+                    <p class="sub-section-heading">Generate I-Card</p>
+                    <p class="sub-section-close-icon">✕</p>
+                </div>
+            </section>
+
+            <!-- ********************************************************************* STUDENT SECTION > UPDATE STUDENT-->
+            <section class="sub-section">
+                <div class="sub-section-header">
+                    <p class="sub-section-heading">Update Student</p>
+                    <p class="sub-section-close-icon">✕</p>
+                </div>
+            </section>
+
+            <!-- ********************************************************************* STUDENT SECTION > PROMOTE STUDENT-->
+            <section class="sub-section">
+                <div class="sub-section-header">
+                    <p class="sub-section-heading">Promote Student</p>
+                    <p class="sub-section-close-icon">✕</p>
+                </div>
+            </section>
+        </section>
+
+
+
+        <!-- ********************************************************************* FINANCE SECTION -->
+        <section class="section" id="finance-section">
+            <div class="section-header">
+                <p class="section-heading">Finance</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* INVENTORY SECTION -->
+        <section class="section" id="inventory-section">
+            <div class="section-header">
+                <p class="section-heading">Inventory</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ******************************************************************** TRANSPORT SECTION -->
+        <section class="section" id="transport-section">
+            <div class="section-header">
+                <p class="section-heading">Transport</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* HOSTEL SECTION -->
+        <section class="section" id="hostel-section">
+            <div class="section-header">
+                <p class="section-heading">Hostel</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* LIBRARY SECTION -->
+        <section class="section" id="library-section">
+            <div class="section-header">
+                <p class="section-heading">Library</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* EXAMINATION SECTION -->
+        <section class="section" id="examination-section">
+            <div class="section-header">
+                <p class="section-heading">Examination</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* EMPLOYEE SECTION -->
+        <section class="section" id="employee-section">
+            <div class="section-header">
+                <p class="section-heading">Employee</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* FRONT-DESK SECTION -->
+        <section class="section" id="front-desk-section">
+            <div class="section-header">
+                <p class="section-heading">Front Desk</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* ACADEMIC SECTION -->
+        <section class="section" id="academic-section">
+            <div class="section-header">
+                <p class="section-heading">Academic</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* USERS-&-ROLES SECTION -->
+        <section class="section" id="users-and-roles-section">
+            <div class="section-header">
+                <p class="section-heading">Users and Roles</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+
+
+        <!-- ********************************************************************* SETTINGS SECTION -->
+        <section class="section" id="settings-section">
+            <div class="section-header">
+                <p class="section-heading">Settings</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
